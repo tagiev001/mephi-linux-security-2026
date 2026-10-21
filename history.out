@@ -1,0 +1,103 @@
+    1  ls
+    2  clear
+    3  ls
+    4  ip a
+    5  ssh mgts@10.0.0.6
+    6  clear
+    7  sshd
+    8  sshd status
+    9  sudo status sshd
+   10  sudo systemctl status sshd
+   11  systemctl status ssh
+   12  systemctl enable sshd
+   13  systemctl start sshd
+   14  ip
+   15  sudo systemctl status sshd
+   16  su user1
+   17  sudo visudo 
+   18  su user1
+   19  history > history.out
+   20  stat ~/cat > stat.out
+   21  stat ~/chown >> stat.out
+   22  cat stat.out 
+   23  getcap ~/chown > getcap.out
+   24  cat getcap.out 
+   25  history 
+   26  sudo find / -type f -perm /4000 2>/dev/null
+   27  find / -type f -perm /4000 2>/dev/null
+   28  clear
+   29  history 
+   30  clear
+   31  history 
+   32  history 
+   33  clear
+   34  echo dz1
+   35  touch dz1
+   36  clear
+   37  sudo groupadd students
+   38  sudo useradd -u 1234 -m -s /bin/bash user1
+   39  sudo passwd --help
+   40  sudo chage -l user1
+   41  sudo passwd -n 30 user1
+   42  su user1
+   43  passwd user1
+   44  sudo passwd user1
+   45  clear
+   46  su user1
+   47  clear
+   48  chage -l user1
+   49  sudo chage -l user1
+   50  sudo passwd --help
+   51  sudo passwd -x 30 user1
+   52  sudo passwd -n 1 user1
+   53  sudo chage -l user1
+   54  clear
+   55  history 
+   56  sudo passwd -x 90 user1
+   57  sudo chage -l user1
+   58  ps -a euid,ruid
+   59  ps euid,ruid
+   60  ps -a euid,ruid
+   61  clear
+   62  ps 
+   63  ps -a
+   64  ps -aux
+   65  ps -au
+   66  ps -ax
+   67  ps 
+   68  ps --help
+   69  ps --help a
+   70  ps -aF
+   71  ps -eo euid,ruid,pid,ppid,user:12,ruser:12,comm,args 
+   72  ps -eo euid,ruid,pid,ppid,user:12,ruser:12,comm,args  | 
+   73  ps -eo euid,ruid,pid,ppid,user:12,ruser:12,comm,args  | awk $1 == 0
+   74  ps -eo euid,ruid,pid,ppid,user:12,ruser:12,comm,args  | awk "$1 == 0"
+   75  ps -eo euid,ruid,pid,ppid,user:12,ruser:12,comm,args  | awk '$1 == 0'
+   76  ps -eo euid,ruid,pid,ppid,user:12,ruser:12,comm,args | awk 'NR==1 || ($1 == 0 && $2 >= 1000 && $2 < 65534)'
+   77  history 
+   78  ps -eo pid,ruid,euid,user,comm | awk '$3 == 0 && $2 != 0'
+   79  sudo ps -eo pid,ruid,euid,user,comm | awk '$3 == 0 && $2 != 0'
+   80  cp /usr/bin/cat .
+   81  ls
+   82  ~/cat 
+   83  ~/cat /etc/shadow
+   84  chown root:root ~/cat 
+   85  sudo chown root:root ~/cat 
+   86  ~/cat /etc/shadow
+   87  sudo chown u+s ~/cat
+   88  sudo chmod u+s ~/cat
+   89  ~/cat /etc/shadow
+   90  clear
+   91  cp /usr/bin/chown .
+   92  sudo setcap cap_chown+ep ./chown 
+   93  getcap ./chown 
+   94  touch testfile
+   95  ls -ln testfile 
+   96  ./chown root:root testfile 
+   97  ls -ln testfile 
+   98  sudo visudo 
+   99  su user1
+  100  sudo visudo 
+  101  clear
+  102  history 
+  103  history > history.out 
